@@ -7,6 +7,11 @@
   position: fixed;
   top: 32px;
   left: 32px;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 
   .logo-icon {
     height: 42px;
@@ -34,7 +39,7 @@
   padding: 16px;
   margin: 4px;
   width: fit-content;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
   transition: 0.5s;
 
@@ -48,11 +53,53 @@
   }
 }
 
+.game-board {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.play-block {
+  display: inline-block;
+  padding: 16px;
+  margin: 4px;
+  height: 56px;
+  width: 56px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: #f8ede3;
+
+  &.selected {
+    pointer-events: none;
+  }
+
+  &.disabled {
+    background-color: #ffffff;
+    pointer-events: none;
+  }
+}
+
 .block-icon {
   height: 56px;
 }
 
-.flexBlock {
+.back-nav {
+  position: fixed;
+  left: 16px;
+}
+
+.restart-icon {
+  height: 42px;
+  transition: 0.5s;
+  cursor: pointer;
+  margin: 0 16px;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+.flex-block {
   display: flex;
   align-items: center;
 }

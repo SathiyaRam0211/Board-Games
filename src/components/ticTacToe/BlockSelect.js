@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Block = ({ src, alt, mark, setMark }) => {
+const BlockSelect = ({ src, alt, mark, setMark }) => {
   const [isSelected, setIsSelected] = useState(false);
   const handleClick = () => {
     setMark(alt);
@@ -22,4 +22,4 @@ const Block = ({ src, alt, mark, setMark }) => {
   );
 };
 
-export default Block;
+export default BlockSelect;
